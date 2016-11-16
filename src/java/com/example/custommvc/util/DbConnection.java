@@ -22,7 +22,7 @@ public class DbConnection {
     public void open() throws ClassNotFoundException,SQLException
     {
         Class.forName("com.mysql.jdbc.Driver");
-        conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/course_management", "root", "null");
+        conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/course_management", "root", null);
     }
     
     public PreparedStatement init(String sql) throws SQLException

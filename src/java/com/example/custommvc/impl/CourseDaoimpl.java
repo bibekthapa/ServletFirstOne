@@ -7,7 +7,9 @@ package com.example.custommvc.impl;
 
 import com.example.custommvc.dao.CourseDao;
 import com.example.custommvc.entity.Course;
+import com.example.custommvc.util.DbConnection;
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,13 +19,28 @@ import java.util.List;
  * @author HOME
  */
 public class CourseDaoimpl implements CourseDao {
-
+        DbConnection db=new DbConnection();
     @Override
-    public List<Course> getAll() throws IOException, SQLException {
+    public List<Course> getAll() throws ClassNotFoundException, SQLException {
             List courselst=new ArrayList();
-            courselst.add(new Course(1,"Advanced Java","Teaches the Advanced Java",20000.0,true));
-             courselst.add(new Course(2," Java","Teaches the  Java",10000.0,true));
-              courselst.add(new Course(3,"Python","Teaches the Python",20000.0,false));
+            
+            db.open();
+            String sql="select * from courses";
+            db.init(sql);
+            ResultSet rs=db.executeQuery();
+            
+            while(rs.next())
+            {
+                Course course=new Course(); // we have to make a separate object for the course so the object must be placed inside the while loop.if the course is instatiated outside the while loop then same object is rewritten
+                course.setId(rs.getInt("course_id"));
+                course.setName(rs.getString("course_name"));
+                course.setDescription(rs.getString("course_description"));
+                course.setFees(rs.getDouble("course_fees"));
+                course.setStatus(rs.getBoolean("course_status"));
+                courselst.add(course);
+            
+            }
+            
               return courselst;
     }
     
