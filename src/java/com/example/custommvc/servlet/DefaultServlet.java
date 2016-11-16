@@ -17,12 +17,13 @@ import javax.servlet.http.HttpServletResponse;
  * @author HOME
  */
 public class DefaultServlet extends HttpServlet{
-    
+    String path="/WEB-INF/views/";
     @Override
     protected void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException,ServletException
     {
-        PrintWriter out=response.getWriter();
-        out.println("<h>Hello World</h>");
+        String name="Bibek Thapa";
+        request.setAttribute("name", name);
+        request.getRequestDispatcher(path+"index.jsp").forward(request, response);
     
     }
     
