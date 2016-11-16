@@ -5,6 +5,7 @@
  */
 package com.example.custommvc.servlet;
 
+import com.example.custommvc.entity.Course;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -21,8 +22,7 @@ public class DefaultServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException,ServletException
     {
-        String name="Bibek Thapa";
-        request.setAttribute("name", name);
+        request.setAttribute("course",new Course(1,"Advanced Java","Teaches the Advanced Java",20000.0,true));
         request.getRequestDispatcher(path+"index.jsp").forward(request, response);
     
     }
