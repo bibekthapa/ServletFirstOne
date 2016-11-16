@@ -35,22 +35,19 @@
             <th>Fees</th>
             <th>Status</th>
             <tr>
-                <%  CourseDao coursedao=new CourseDaoimpl();
-                    for(Course c: coursedao.getAll()){
-                
-                %>
+                <c:forEach var="course" items="${requestScope.courses}">
                 
                 
             <tr>
-                <td><%=c.getId() %> </td>
-                <td><%=c.getName()%></td>
-                <td><%=c.getDescription()%></td>
-                <td><%=c.getFees()%></td>
-                <td><%=c.getStatus()%></td>
+                <td>${course.id} </td>
+                <td>${course.name}</td>
+                <td>${course.description}</td>
+                <td>${course.fees}</td>
+                <td>${course.status}</td>
                 
             </tr>
             
-            <%}%>
+            </c:forEach>
             
         </table>
         </div>

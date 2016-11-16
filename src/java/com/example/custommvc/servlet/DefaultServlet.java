@@ -5,24 +5,34 @@
  */
 package com.example.custommvc.servlet;
 
+import com.example.custommvc.dao.CourseDao;
 import com.example.custommvc.entity.Course;
+import com.example.custommvc.impl.CourseDaoimpl;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author HOME
- */
+@WebServlet(name = "default" , urlPatterns = {"/home"} )
 public class DefaultServlet extends HttpServlet{
     String path="/WEB-INF/views/";
+    CourseDao coursedao=new CourseDaoimpl();
     @Override
     protected void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException,ServletException
     {
-        request.setAttribute("course",new Course(1,"Advanced Java","Teaches the Advanced Java",20000.0,true));
+        try {
+            request.setAttribute("courses", coursedao.getAll());
+        } catch (ClassNotFoundException ex) {
+            ex.getMessage();
+        } catch (SQLException ex) {
+                ex.getMessage();
+        }
         request.getRequestDispatcher(path+"index.jsp").forward(request, response);
     
     }

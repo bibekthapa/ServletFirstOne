@@ -5,16 +5,7 @@
 	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	 version="3.1">
     
-    <servlet>
-        <servlet-name>Default</servlet-name>
-        <servlet-class>com.example.custommvc.servlet.DefaultServlet</servlet-class>
-        
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Default</servlet-name>
-        <url-pattern>/</url-pattern>
-        
-    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30

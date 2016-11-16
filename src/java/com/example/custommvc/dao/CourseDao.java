@@ -18,6 +18,6 @@ import java.util.List;
  */
 public interface CourseDao {
     
-    public List<Course> getAll() throws IOException,SQLException ;
+    public List<Course> getAll() throws ClassNotFoundException,SQLException ;
     
 }
