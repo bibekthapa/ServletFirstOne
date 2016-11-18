@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "CourseController",urlPatterns = "/admin/course/*")
+@WebServlet(name = "CourseController",urlPatterns = "/admin/course")
 
 public class CourseController extends Controller{
 

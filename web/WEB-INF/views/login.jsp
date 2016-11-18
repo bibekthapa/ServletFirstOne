@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,21 +13,27 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <div class="container">
-        <form method="post">
-           
-            <div>
-                 <h1>Login Page</h1>
-            <label>Username</label>
-            <input type="text" name="username" required="required">
-            </div>
-            <div>
-                <div>        </div>
-            <label> Password</label>
-            <input type="password" name="password" required="required">
-            </div>
+        
+            <c:if test="${param.error!=null}">
+                Invalid username and password
+                </c:if>
+                  
+            <form method="post">
+                
+
+                <div>
+                    <h1>Login Page</h1>
+                    <label>Username</label>
+                    <input type="text" name="username" required="required">
+                </div>
+                <div>
+                    <div>  </div>
+                    <label> Password</label>
+                    <input type="password" name="password" required="required">
+                </div>
+                <button type="submit">Login</button>
             </form>
-        <button type="submit">Login</button>
-        </div>
+            
+      
     </body>
 </html>

@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "default" , urlPatterns = {"/"} )
+@WebServlet(name = "CourseController",urlPatterns = "/admin/courselist")
 public class DefaultServlet extends HttpServlet{
     String path="/WEB-INF/views/";
     CourseDao coursedao=new CourseDaoimpl();
