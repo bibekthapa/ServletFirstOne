@@ -19,5 +19,6 @@ import java.util.List;
 public interface CourseDao {
     
     public List<Course> getAll() throws ClassNotFoundException,SQLException ;
+    public int add(Course c)throws ClassNotFoundException,SQLException;
     
 }

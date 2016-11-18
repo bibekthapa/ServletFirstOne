@@ -9,6 +9,7 @@ import com.example.custommvc.dao.CourseDao;
 import com.example.custommvc.entity.Course;
 import com.example.custommvc.impl.CourseDaoimpl;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -19,7 +20,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "default" , urlPatterns = {"/home"} )
+@WebServlet(name = "default" , urlPatterns = {"/"} )
 public class DefaultServlet extends HttpServlet{
     String path="/WEB-INF/views/";
     CourseDao coursedao=new CourseDaoimpl();
@@ -36,6 +37,15 @@ public class DefaultServlet extends HttpServlet{
         request.getRequestDispatcher(path+"index.jsp").forward(request, response);
     
     }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+         
+           
+            // PrintStream ps=new PrintStream(response.getOutputStream());
+          //ps.println("Hello world");
+    }
+    
     
     
 }

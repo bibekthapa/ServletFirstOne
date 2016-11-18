@@ -9,6 +9,7 @@ import com.example.custommvc.dao.CourseDao;
 import com.example.custommvc.entity.Course;
 import com.example.custommvc.util.DbConnection;
 import java.io.IOException;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -42,6 +43,24 @@ public class CourseDaoimpl implements CourseDao {
             }
             
               return courselst;
+    }
+
+    @Override
+    public int add(Course c) throws ClassNotFoundException, SQLException {
+            db.open();
+            String sql="Insert into courses(course_id,course_name,course_description,course_fees,course_status) "+
+                    "values(?,?,?,?,?)";
+            PreparedStatement stmt=db.init(sql);
+            stmt.setInt(1, c.getId());
+            stmt.setString(2, c.getName());
+             stmt.setString(3, c.getDescription());
+             stmt.setDouble(4, c.getFees());
+             stmt.setBoolean(5, c.getStatus());
+            
+            int result=stmt.executeUpdate();
+            db.close();
+            return result;
+
     }
     
 }
