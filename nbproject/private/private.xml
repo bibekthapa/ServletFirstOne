@@ -4,12 +4,21 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/web/WEB-INF/views/header.jsp</file>
-            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/src/java/com/example/custommvc/impl/CourseDaoimpl.java</file>
             <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/src/java/com/example/custommvc/servlet/DefaultServlet.java</file>
-            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/src/java/com/example/custommvc/servlet/AddServlet.java</file>
+            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/web/WEB-INF/views/login.jsp</file>
+            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/src/java/com/example/custommvc/controller/system/Controller.java</file>
+            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/src/java/com/example/custommvc/util/DbConnection.java</file>
             <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/web/WEB-INF/views/addcourse.jsp</file>
-            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/web/WEB-INF/views/index.jsp</file>
             <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/web/WEB-INF/views/footer.jsp</file>
+            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/src/java/com/example/custommvc/filter/AuthFilter.java</file>
+            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/src/java/com/example/custommvc/controller/LoginController.java</file>
+            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/src/java/com/example/custommvc/controller/admin/CourseController.java</file>
+            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/src/java/com/example/custommvc/impl/CourseDaoimpl.java</file>
+            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/src/java/com/example/custommvc/dao/CourseDao.java</file>
+            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/src/java/com/example/custommvc/servlet/AddServlet.java</file>
+            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/src/java/com/example/custommvc/controller/LogoutController.java</file>
+            <file>file:/C:/Users/HOME/Documents/NetBeansProjects/lfa_ajv/web/WEB-INF/views/index.jsp</file>
         </group>
     </open-files>
 </project-private>

@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author HOME
  */
-@WebServlet(name = "LoginController",urlPatterns = {"/login/*"})
+@WebServlet(name = "LoginController",urlPatterns = {"/","/login/*"})
 //    "/" is for virtualization . 
 public class LoginController extends Controller {
 
